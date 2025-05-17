@@ -18,5 +18,5 @@ export const swiperImagesUrl = [
   { src: "/images/3.jpg" },
   { src: "/images/4.jpg" },
   { src: "/images/5.jpg" },
-  
+
 ];

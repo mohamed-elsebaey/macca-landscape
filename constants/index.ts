@@ -13,10 +13,8 @@ export const navigationLinks = [
 ];
 
 export const swiperImagesUrl = [
-  { src: "/images/1.jpg" },
-  { src: "/images/2.jpg" },
-  { src: "/images/3.jpg" },
-  { src: "/images/4.jpg" },
-  { src: "/images/5.jpg" },
-
+  { src: "/images/background-image-1.jpg" },
+  { src: "/images/background-image-2.jpg" },
+  { src: "/images/background-image-3.jpg" },
+  { src: "/images/background-image-4.jpg" },
 ];

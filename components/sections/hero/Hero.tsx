@@ -14,7 +14,7 @@ export const Hero = () => {
         <div className="content-width">
           <div className="w-full justify-start items-center gap-8 grid lg:grid-cols-2 grid-cols-1">
             <div className="flex flex-col gap-8 items-center lg:items-start">
-              <h2 className="text-2xl font-bold sm:text-3xl">
+              <h2 className="text-2xl font-bold sm:text-3xl lg:text-start text-center">
                 اخلق حديقة أحلامك مع
                 <span className="m-2 p-1 rounded inline-block bg-gradient-to-r from-lime-400 to-sky-400 px-2 font-bold text-white">
                   {companyName.ar}

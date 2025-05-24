@@ -1,12 +1,12 @@
 import React from "react";
 
-import image1 from "@/public/images/image1.jpg";
-import image2 from "@/public/images/background-image-2.jpg";
-import image3 from "@/public/images/background-image-3.jpg";
-import image4 from "@/public/images/background-image-4.jpg";
-import Link from "next/link";
-import Image from "next/image";
-import { companyName } from "@/constants";
+// import image1 from "@/public/images/image1.jpg";
+// import image2 from "@/public/images/background-image-2.jpg";
+// import image3 from "@/public/images/background-image-3.jpg";
+// import image4 from "@/public/images/background-image-4.jpg";
+// import Link from "next/link";
+// import Image from "next/image";
+// import { companyName } from "@/constants";
 
 export const TestPage = () => {
   return (

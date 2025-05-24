@@ -9,10 +9,13 @@ const cairo = Cairo({
   weight: ["400", "500", "600", "700"],
   variable: "--font-cairo",
   subsets: ["arabic", "latin"],
+  display: "swap",
+  adjustFontFallback: false,
+  preload: true,
 });
 
 export const metadata: Metadata = {
-  title: `${companyName.en}`,
+  title: `${companyName.ar}`,
   description: "مكة لاندسكيب - تصميم وتنفيذ الحدائق",
 };
 

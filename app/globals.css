@@ -139,6 +139,12 @@
   @apply flex items-center justify-center;
 }
 
+
+
+@utility background-gradient {
+  @apply bg-gradient-to-r from-lime-400 to-sky-400 text-white;
+}
+
 @utility header-gradient {
   @apply bg-gradient-to-l from-[#0b3a4e] to-[#086992] text-white;
 }

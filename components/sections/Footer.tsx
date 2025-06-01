@@ -8,7 +8,7 @@ import Image from 'next/image';
 const FooterSection = () => {
   return (
     <footer className="section-margin header-gradient">
-      <div className="content-width py-12">
+      <div className="content-width pt-12 pb-4">
         <div className="flex flex-col md:flex-row flex-wrap items-center text-center md:text-right lg:justify-between gap-8">
           {/* Company Info */}
           <div className='flex flex-col justify-center items-center gap-4 md:gap-2 text-center md:w-[300px]'>
@@ -167,7 +167,7 @@ const FooterSection = () => {
               target="_blank"
               rel="noopener noreferrer"
               className='text-primary'
-            >es95</a>. All rights reserved.
+            >ES95</a>. All rights reserved.
           </p>
         </div>
       </div>

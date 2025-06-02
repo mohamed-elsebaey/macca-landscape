@@ -4,6 +4,8 @@ import "./globals.css";
 import Header from "@/components/sections/header/Header";
 import FooterSection from "@/components/sections/Footer";
 import { companyName } from "@/constants";
+import { CartProvider } from "@/contexts/CartContext";
+
 
 const cairo = Cairo({
   weight: ["400", "500", "600", "700"],
@@ -15,7 +17,10 @@ const cairo = Cairo({
 });
 
 export const metadata: Metadata = {
-  title: `${companyName.ar}`,
+  title: {
+    default: `${companyName.ar}`,
+    template: `${companyName.ar} | %s`,
+  },
   description: "مكة لاندسكيب - تصميم وتنفيذ الحدائق",
 };
 
@@ -32,10 +37,12 @@ export default function RootLayout({
       className="max-w-[2200px] mx-auto"
     >
       <body className={`${cairo.variable} antialiased`}>
-        <Header userRole={false} profilePath="" />
-        {children}
-        <FooterSection />
-        {/* <Toaster /> */}
+        <CartProvider>
+          <Header />
+          {children}
+          <FooterSection />
+          {/* <Toaster /> */}
+        </CartProvider>
       </body>
     </html>
   );

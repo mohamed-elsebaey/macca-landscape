@@ -7,9 +7,14 @@ import Image from 'next/image';
 
 const FooterSection = () => {
   return (
-    <footer className="section-margin header-gradient">
+    <footer className="footer-gradient relative z-10 overflow-hidden">
+      {/* Organic Background Pattern */}
+      {/* <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-green-400 to-emerald-500" style={{borderRadius: '60% 40% 30% 70% / 60% 30% 70% 40%', filter: 'blur(80px)'}}></div>
+        <div className="absolute bottom-0 right-0 w-80 h-80 bg-gradient-to-br from-lime-400 to-green-500" style={{borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%', filter: 'blur(60px)'}}></div>
+      </div> */}
       <div className="content-width pt-12 pb-4">
-        <div className="flex flex-col md:flex-row flex-wrap items-center text-center md:text-right lg:justify-between gap-8">
+        <div className="flex flex-col md:flex-row flex-wrap items-center md:items-start text-center md:text-right lg:justify-between gap-8">
           {/* Company Info */}
           <div className='flex flex-col justify-center items-center gap-4 md:gap-2 text-center md:w-[300px]'>
             <Image src={Logo} alt='landscape logo' width={50} height={50} />
@@ -101,7 +106,7 @@ const FooterSection = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 ">روابط سريعة</h3>
+            <h3 className="text-lg font-semibold mb-4 text-gradient">روابط سريعة</h3>
             <div className="space-y-2 text-green-100">
               {navigationLinks.map((link, index) => (
                 <Link
@@ -118,7 +123,7 @@ const FooterSection = () => {
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">خدماتنا</h3>
+            <h3 className="text-lg font-semibold mb-4 text-gradient">خدماتنا</h3>
             <ul className="space-y-2 text-green-100">
               <li>تصميم الحدائق</li>
               <li>توريد النباتات</li>
@@ -129,7 +134,7 @@ const FooterSection = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">تواصل معنا</h3>
+            <h3 className="text-lg font-semibold mb-4 text-gradient">تواصل معنا</h3>
             <div className="space-y-3">
               <a
                 href="https://maps.app.goo.gl/T8tqhepM2Mu9mLtD9"

@@ -79,7 +79,7 @@ const Services = () => {
         >
             <div className="content-width">
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl font-bold mb-4 text-primary">
+                    <h2 className="text-4xl font-bold mb-4 text-gradient-2">
                         خدماتنا
                     </h2>
                     <p className="text-xl max-w-3xl mx-auto text-muted-foreground">

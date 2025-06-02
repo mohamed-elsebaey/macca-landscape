@@ -10,13 +10,13 @@ export const Hero = () => {
   return (
     <>
       {/*  */}
-      <section className="section-margin relative ">
+      <section className="section-margin mt-28 relative ">
         <div className="content-width">
           <div className="w-full justify-start items-center gap-8 grid lg:grid-cols-2 grid-cols-1">
             <div className="flex flex-col gap-8 items-center lg:items-start">
               <h2 className="text-2xl font-bold sm:text-3xl lg:text-start text-center">
                 اصنع حديقة أحلامك مع
-                <span className="m-2 p-1 rounded inline-block bg-gradient-to-r from-lime-400 to-sky-400 px-2 font-bold text-white">
+                <span className="float m-2 p-1 rounded inline-block bg-gradient-to-r from-lime-400 to-sky-400 px-2 font-bold text-white">
                   {companyName.ar}
                 </span>
               </h2>

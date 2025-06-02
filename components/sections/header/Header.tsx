@@ -3,24 +3,18 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { AlignJustify, X } from "lucide-react";
+import { AlignJustify, ShoppingBag, X } from "lucide-react";
 import OutsideClickHandler from "react-outside-click-handler";
 
 import logo from "@/public/logo/logo-circle.png";
-import Avatar from "./Avatar";
 import { navigationLinks } from "@/constants";
-import { Button } from "@/components/ui/button";
+import { useCart } from "@/contexts/CartContext";
 
-function Header({
-  userRole,
-  profilePath,
-}: {
-  userRole: string | boolean;
-  profilePath: string;
-}) {
+function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { getCartItemsCount } = useCart();
 
-  const login = userRole ? true : false;
+
 
   const openMenuHandler = () => {
     setIsMenuOpen(() => !isMenuOpen);
@@ -30,7 +24,7 @@ function Header({
   };
   return (
     <OutsideClickHandler onOutsideClick={closeMenuHandler}>
-      <div className="header-gradient" >
+      <header className="header-gradient backdrop-blur-md shadow-2xl border-b border-green-600/30 fixed w-full top-0 z-50" >
         <div className="content-width flex flex-wrap items-center justify-between">
           <Link href="/" className="z-50" onClick={closeMenuHandler}>
             <Image
@@ -59,9 +53,8 @@ function Header({
           </button>
           {/* ***************************** */}
           <div
-            className={`${
-              isMenuOpen ? "flex" : "hidden"
-            } w-full md:block md:w-auto`}
+            className={`${isMenuOpen ? "flex" : "hidden"
+              } w-full md:block md:w-auto`}
             id="navbar-default"
           >
             <ul className="w-full font-medium flex flex-col gap-5 md:gap-4 lg:gap-8 items-center p-4 md:p-0 mt-4 mb-4 md:mb-0 rounded-lg md:flex-row  md:mt-0 md:border-0 md:bg-transparent ">
@@ -77,32 +70,18 @@ function Header({
                 </li>
               ))}
               {/* line in small devices */}
-              {login && (
-                <li className="border border-primary w-[90%] md:hidden"></li>
-              )}
-
               <li className="mt-2 md:mt-0">
-                {!login ? (
-                  <Link href="/sign-in">
-                    <Button
-                      onClick={closeMenuHandler}
-                      className="cursor-pointer"
-                    >
-                      تسجيل الدخول{" "}
-                    </Button>
-                  </Link>
-                ) : (
-                  <Avatar
-                    userRole={userRole}
-                    onClick={closeMenuHandler}
-                    profilePath={profilePath}
-                  />
-                )}
+                <Link href="/cart" className="relative p-3 text-green-50 hover:text-green-200 transition-all duration-300 group">
+                  <ShoppingBag className="w-7 h-7" />
+                  <span className="absolute top-5 right-6  natural-gradient text-white text-xs rounded-full p-1 min-w-6 min-h-6 max-w-10 flex items-center justify-center font-bold shadow-lg animate-pulse">
+                    {getCartItemsCount() > 100 ? "100+" : getCartItemsCount()}
+                  </span>
+                </Link>
               </li>
             </ul>
           </div>
         </div>
-      </div>
+      </header>
     </OutsideClickHandler>
   );
 }

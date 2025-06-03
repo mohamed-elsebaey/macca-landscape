@@ -6,6 +6,7 @@ import { Leaf, Flower } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { categories, projects } from './_constants';
+import Link from 'next/link';
 
 const OurProjectsPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('الكل');
@@ -72,15 +73,17 @@ const OurProjectsPage = () => {
                 </div>
 
                 <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
-                  <Button
-                    variant="secondary"
-                    className="bg-white/90 hover:bg-white text-green-700 
-                               hover:text-green-800 font-bold 
-                               shadow-md backdrop-blur-sm border"
-                  >
-                    <Flower className="w-5 h-5 ml-2 text-green-600" />
-                    عرض التفاصيل
-                  </Button>
+                  <Link href={`/our-projects/${project.titleEn}`}>
+                    <Button
+                      variant="secondary"
+                      className="bg-white/90 hover:bg-white text-green-700 
+                    hover:text-green-800 font-bold 
+                    shadow-md backdrop-blur-sm border"
+                    >
+                      <Flower className="w-5 h-5 ml-2 text-green-600" />
+                      عرض التفاصيل
+                    </Button>
+                  </Link>
                 </div>
               </div>
 

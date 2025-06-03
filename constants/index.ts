@@ -18,7 +18,7 @@ export const navigationLinks = [
   { href: "/", label: "الرئيسية" },
   { href: "/about", label: "من نحن" },
   { href: "/our-services", label: "خدماتنا" },
-  { href: "/", label: "أعمالنا" },
+  { href: "/our-projects", label: "أعمالنا" },
   { href: "/", label: "المتجر" },
 ];
 

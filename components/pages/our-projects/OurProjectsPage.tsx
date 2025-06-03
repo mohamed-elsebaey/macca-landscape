@@ -49,10 +49,10 @@ const OurProjectsPage = () => {
 
       <section className="py-16">
         <div className="content-width grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project) => (
+          {filteredProjects.map((project, index) => (
             <Card
               key={project.id}
-              className="group backdrop-blur-sm  hover:shadow-2xl transition-all duration-300 
+              className="group backdrop-blur-sm hover:shadow-2xl transition-all duration-300 
                           overflow-hidden hover:scale-[1.02] py-0"
             >
               <div className="relative overflow-hidden h-96 w-full">
@@ -60,7 +60,9 @@ const OurProjectsPage = () => {
                   width={800}
                   height={800}
                   src={project.image}
-                  alt={project.title}
+                  alt={`Image of ${project.title} project (${project.category})`}
+                  loading="lazy"
+                  fetchPriority={index < 3 ? "high" : "low"}
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-70 group-hover:opacity-80 transition-opacity duration-300"></div>
@@ -76,9 +78,8 @@ const OurProjectsPage = () => {
                   <Link href={`/our-projects/${project.titleEn}`}>
                     <Button
                       variant="secondary"
-                      className="bg-white/90 hover:bg-white text-green-700 
-                    hover:text-green-800 font-bold 
-                    shadow-md backdrop-blur-sm border"
+                      className="bg-white/90 hover:bg-white text-green-700 hover:text-green-800 font-bold 
+                                 shadow-md backdrop-blur-sm border"
                     >
                       <Flower className="w-5 h-5 ml-2 text-green-600" />
                       عرض التفاصيل

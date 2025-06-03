@@ -20,10 +20,10 @@ export default async function Layout({
   const resolvedParams = (await params).projectName;
 
   return (
-    <>
+    <div className="min-h-screen">
       <Breadcrumb projectTitleEn={resolvedParams} />
       {children}
-    </>
+    </div>
   );
 }
 

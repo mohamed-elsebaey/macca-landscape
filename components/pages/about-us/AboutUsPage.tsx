@@ -1,57 +1,29 @@
 
+import Image from 'next/image';
 import { Users } from 'lucide-react';
+
 import { Card, CardContent } from '@/components/ui/card';
 
-import CEO from '@/public/CEO.png'; // Assuming you have a CEO image
 import aboutUsImage1 from '@/public/aboutUsImage1.jpeg'; // Assuming you have an about us image
 import aboutUsImage2 from '@/public/aboutUsImage2.jpeg'; // Assuming you have an about us image
-import Image from 'next/image';
+
+import { about, hero, team } from './_constants';
 
 
 
 const AboutUsPage = () => {
-  const hero = {
-    title: 'تحويل المساحات الخارجية',
-    subtitle: 'بلمسة طبيعية فريدة',
-    description: 'نقدم خدمات تنسيق حدائق احترافية واعتمادًا على النباتات المصرية الأصيلة، لننشئ مساحات خارجية مبهرة تلهم حواسك وتعزز رفاهيتك.',
-    projectsCompleted: 'مشاريع مُكتملة',
-    yearsExperience: 'سنوات خبرة',
-    happyClients: 'عملاء راضون'
-  };
-
-  const about = {
-    mission: 'مهمتنا',
-    missionText: 'تقديم تصميمات مناظر طبيعية خارجية متكاملة تجمع بين الجمال والوظيفة، باستخدام النباتات المصرية الأصيلة وأساليب مستدامة، لخلق بيئات تعزز راحة المستخدمين وتدعم الحفاظ على الموارد الطبيعية.',
-    vision: 'رؤيتنا',
-    visionText: 'أن تصبح Macca Landscape الرائدة في مصر في تصميم المناظر الطبيعية، معروفة بابتكاراتها واستدامتها وقدرتها على خلق مساحات خضراء تلهم الناس وتعيد التواصل بين الحياة اليومية والطبيعة.',
-    meetTeam: 'تعرف على فريقنا',
-    teamSubtitle: 'فريقنا المتحمس من الخبراء يجلب سنوات من الخبرة والإبداع لكل مشروع نقوم به'
-  };
-
-
-
-  const team = [
-    {
-      name: 'محمد رمضان',
-      role: 'المؤسس والمصمم الرئيسي',
-      description: 'متخصص في تصميم المساحات الخارجية المستدامة والجمالية.',
-      profileImage: CEO,
-    },
-
-  ];
-
   return (
     <div className="bg-gradient-to-br from-green-50 via-emerald-50 to-lime-50">
       {/* Hero Section */}
       <section className="section-margin py-24 relative overflow-hidden">
         <div className="content-width flex items-center relative z-10">
-          <div className="flex flex-col lg:flex-row justify-between gap-16 items-center ">
+          <div className="flex flex-col lg:flex-row text-center lg:text-start lg:justify-between gap-16 items-center w-full">
             {/* Content */}
             <div className='flex flex-col gap-8 w-full lg:w-1/2'>
               <div className="space-y-8">
-                <h1 className="text-3xl lg:text-4xl font-bold text-gray-800 leading-tight">
+                <h1 className="text-3xl lg:text-4xl font-bold leading-tight">
                   {hero.title}
-                  <span className="block natural-gradient bg-clip-text text-transparent drop-shadow-lg">{hero.subtitle}</span>
+                  <span className="block text-gradient-2">{hero.subtitle}</span>
                 </h1>
                 <p className="text-xl max-w-3xl mx-auto text-muted-foreground">
                   {hero.description}
@@ -59,17 +31,17 @@ const AboutUsPage = () => {
               </div>
 
               {/* Enhanced Stats */}
-              <div className="grid grid-cols-3 gap-8">
+              <div className="grid grid-cols-3 gap-4 md:gap-8">
                 <div className="text-center nature-card p-6 organic-border leaf-shadow">
-                  <div className="text-2xl font-bold natural-gradient bg-clip-text text-transparent">500+</div>
+                  <div className="text-lg sm:text-xl md:text-2xl font-bold natural-gradient bg-clip-text text-transparent">500+</div>
                   <div className="text-sm text-gray-600 mt-3 font-medium">{hero.projectsCompleted}</div>
                 </div>
                 <div className="text-center nature-card p-6 organic-border leaf-shadow">
-                  <div className="text-2xl font-bold natural-gradient bg-clip-text text-transparent">16+</div>
+                  <div className="text-lg sm:text-xl md:text-2xl font-bold natural-gradient bg-clip-text text-transparent">16+</div>
                   <div className="text-sm text-gray-600 mt-3 font-medium">{hero.yearsExperience}</div>
                 </div>
                 <div className="text-center nature-card p-6 organic-border leaf-shadow">
-                  <div className="text-2xl font-bold natural-gradient bg-clip-text text-transparent">1000+</div>
+                  <div className="text-lg sm:text-xl md:text-2xl font-bold natural-gradient bg-clip-text text-transparent">1000+</div>
                   <div className="text-sm text-gray-600 mt-3 font-medium">{hero.happyClients}</div>
                 </div>
               </div>

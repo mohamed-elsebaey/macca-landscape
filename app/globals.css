@@ -153,6 +153,9 @@
 @utility text-gradient-2 {
   @apply bg-gradient-to-r from-[#059669] to-[#10b981] bg-clip-text text-transparent drop-shadow-lg leading-snug;
 }
+@utility page-background-gradient {
+  @apply bg-gradient-to-br from-green-50 via-emerald-50 to-lime-50;
+}
 
 @utility animate-fadeIn {
   animation: fadeIn 0.3s ease-in-out;

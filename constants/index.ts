@@ -17,7 +17,7 @@ export const companySlogan: { ar: string; en: string } = {
 export const navigationLinks = [
   { href: "/", label: "الرئيسية" },
   { href: "/about", label: "من نحن" },
-  { href: "/", label: "خدماتنا" },
+  { href: "/our-services", label: "خدماتنا" },
   { href: "/", label: "أعمالنا" },
   { href: "/", label: "المتجر" },
 ];

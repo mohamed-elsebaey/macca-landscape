@@ -55,7 +55,7 @@ export const projects: Project[]  = [
     year: "2024",
     image: image2,
     description: "",
-    images: Array.from({ length: 10 }, (_, i) => ({
+    images: Array.from({ length: 12 }, (_, i) => ({
       url: `/images/${encodeURIComponent("العاصمة الادارية النهر الأخضر")}/${
         i + 1
       }.webp`,
@@ -91,7 +91,7 @@ export const projects: Project[]  = [
     year: "2024",
     image: image4,
     description: "",
-    images: Array.from({ length: 7 }, (_, i) => ({
+    images: Array.from({ length: 6 }, (_, i) => ({
       url: `/images/${encodeURIComponent("مدينة الشبخ زايد")}/${i + 1}.webp`,
       width: 1200,
       height: 800,
@@ -107,7 +107,7 @@ export const projects: Project[]  = [
     year: "2024",
     image: image5,
     description: "",
-    images: Array.from({ length: 6 }, (_, i) => ({
+    images: Array.from({ length: 22 }, (_, i) => ({
       url: `/images/${encodeURIComponent("مدينة 6 أكتوبر")}/${i + 1}.webp`,
       width: 1200,
       height: 800,
@@ -123,7 +123,7 @@ export const projects: Project[]  = [
     year: "2024",
     image: image6,
     description: "",
-    images: Array.from({ length: 9 }, (_, i) => ({
+    images: Array.from({ length: 29 }, (_, i) => ({
       url: `/images/${encodeURIComponent("فلل")}/${i + 1}.webp`,
       width: 1200,
       height: 800,
@@ -139,7 +139,7 @@ export const projects: Project[]  = [
     year: "2024",
     image: image7,
     description: "",
-    images: Array.from({ length: 5 }, (_, i) => ({
+    images: Array.from({ length: 20 }, (_, i) => ({
       url: `/images/${encodeURIComponent("التجمع الخامس")}/${i + 1}.webp`,
       width: 1200,
       height: 800,
@@ -155,7 +155,7 @@ export const projects: Project[]  = [
     year: "2024",
     image: image8,
     description: "",
-    images: Array.from({ length: 4 }, (_, i) => ({
+    images: Array.from({ length: 8 }, (_, i) => ({
       url: `/images/${encodeURIComponent("مدينة الزعفرانه")}/${i + 1}.webp`,
       width: 1200,
       height: 800,
@@ -171,7 +171,7 @@ export const projects: Project[]  = [
     year: "2024",
     image: image9,
     description: "",
-    images: Array.from({ length: 6 }, (_, i) => ({
+    images: Array.from({ length: 5 }, (_, i) => ({
       url: `/images/${encodeURIComponent("مدينة العلمين")}/${i + 1}.webp`,
       width: 1200,
       height: 800,

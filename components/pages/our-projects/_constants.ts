@@ -180,3 +180,6 @@ export const projects: Project[]  = [
     })),
   },
 ];
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export const projectsSummary = projects.map(({ images, ...rest }) => rest);

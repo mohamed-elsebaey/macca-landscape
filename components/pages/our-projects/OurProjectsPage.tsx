@@ -5,7 +5,7 @@ import { Leaf, Flower } from 'lucide-react';
 
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { categories, projects } from './_constants';
+import { categories, projectsSummary } from './_constants';
 import Link from 'next/link';
 
 const OurProjectsPage = () => {
@@ -13,8 +13,8 @@ const OurProjectsPage = () => {
 
   const filteredProjects =
     selectedCategory === 'الكل'
-      ? projects
-      : projects.filter((project) => project.category === selectedCategory);
+      ? projectsSummary
+      : projectsSummary.filter((project) => project.category === selectedCategory);
 
   return (
     <div className="min-h-screen pt-16">
@@ -61,8 +61,8 @@ const OurProjectsPage = () => {
                   height={800}
                   src={project.image}
                   alt={`Image of ${project.title} project (${project.category})`}
-                  loading="lazy"
-                  fetchPriority={index < 3 ? "high" : "low"}
+                  priority={index < 3 ? true : false}
+                  loading={index > 3 ? 'lazy' : 'eager'}
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-70 group-hover:opacity-80 transition-opacity duration-300"></div>

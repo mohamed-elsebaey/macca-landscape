@@ -13,7 +13,7 @@ type Props = {
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const param = (await params).projectName
+  const param = params.projectName; // removed await
   const decodedTitle = decodeURIComponent(param);
   const project = projects.find((proj) => proj.titleEn === decodedTitle);
 
@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function Page({ params }: Props) {
-  const param = (await params).projectName
+  const param = params.projectName; // removed await
   const decodedTitle = decodeURIComponent(param);
   const project = projects.find((proj) => proj.titleEn === decodedTitle);
 

@@ -4,17 +4,15 @@ import { notFound } from "next/navigation";
 import { projects, ProjectImage } from "@/components/pages/our-projects/_constants";
 import { Metadata } from "next";
 
-
-
 type Props = {
-  params: {
+  params: Promise<{
     projectName: string;
-  };
+  }>;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const param = params.projectName; // removed await
-  const decodedTitle = decodeURIComponent(param);
+  const { projectName } = await params;
+  const decodedTitle = decodeURIComponent(projectName);
   const project = projects.find((proj) => proj.titleEn === decodedTitle);
 
   if (!project) {
@@ -31,8 +29,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function Page({ params }: Props) {
-  const param = params.projectName; // removed await
-  const decodedTitle = decodeURIComponent(param);
+  const { projectName } = await params;
+  const decodedTitle = decodeURIComponent(projectName);
   const project = projects.find((proj) => proj.titleEn === decodedTitle);
 
   if (!project) {
@@ -41,8 +39,6 @@ export default async function Page({ params }: Props) {
 
   return (
     <main className="min-h-screen content-width py-16">
-      
-      {/* حاوية Masonry باستخدام الـ Columns */}
       <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 xl:columns-5 gap-4">
         {project.images.map((img: ProjectImage, idx: number) => (
           <div
@@ -60,7 +56,7 @@ export default async function Page({ params }: Props) {
               className="w-full h-auto object-cover transition-transform duration-300 ease-in-out hover:scale-105"
               placeholder={img.blurDataURL ? "blur" : undefined}
               blurDataURL={img.blurDataURL}
-              loading="lazy" //.lazy is default in Next 13 عموماً، لكن نضيفها هنا ضمانًا
+              loading="lazy"
             />
           </div>
         ))}

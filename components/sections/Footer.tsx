@@ -1,4 +1,4 @@
-import { navigationLinks } from '@/constants';
+import { navigationLinks, socialMediaUrl } from '@/constants';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import Link from 'next/link';
 
@@ -17,13 +17,13 @@ const FooterSection = () => {
         <div className="flex flex-col md:flex-row flex-wrap items-center md:items-start text-center md:text-right lg:justify-between gap-8">
           {/* Company Info */}
           <div className='flex flex-col justify-center items-center gap-4 md:gap-2 text-center md:w-[300px]'>
-            <Image src={Logo} alt='landscape logo' width={50} height={50} />
+            <Image className='float' src={Logo} alt='landscape logo' width={60} height={60} />
             <p className="text-green-100">
               نجسد جمال الطبيعة بإحياء المساحات عبر تنسيق حدائق احترافية وحلول نباتية مبتكرة ترتقي بالجمال وتلبي الاحتياجات.            </p>
             <div className="flex flex-wrap gap-2">
               <Link
-                href="#"
-                // target="_blank"
+                href={socialMediaUrl.facebook}
+                target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
                 className="text-green-100 hover:text-primary block"

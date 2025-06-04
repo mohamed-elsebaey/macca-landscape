@@ -34,17 +34,17 @@ export const Hero = () => {
               </ul>
 
               <div className="flex gap-4">
-                <Link href="/#contact-us">
+                <Link href="https://wa.me/+201002905831" target="_blank" rel="noopener noreferrer">
                   <Button
                     variant="default"
                     size="lg"
                     className="font-semibold cursor-pointer bg-gradient-to-r from-lime-400 to-sky-400 shadow-lg shadow-sky-300 outline-none transition duration-200 hover:scale-105 hover:bg-sky-500 focus:ring"
                   >
-                    تواصل معنا 
+                    تواصل معنا
                   </Button>
                 </Link>
                 <Link
-                  href="/#videos"
+                  href="/our-projects"
                   className="inline-flex items-center font-semibold text-sky-400 transition-colors duration-200 hover:text-lime-400"
                 >
                   <svg

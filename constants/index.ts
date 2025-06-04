@@ -13,7 +13,6 @@ export const companySlogan: { ar: string; en: string } = {
   en: "Nature's Beauty in Every Corner",
 };
 
-
 export const navigationLinks = [
   { href: "/", label: "الرئيسية" },
   { href: "/about", label: "من نحن" },
@@ -28,3 +27,7 @@ export const swiperImagesUrl = [
   { src: "/images/background-image-3.jpg" },
   { src: "/images/background-image-4.jpg" },
 ];
+
+export const socialMediaUrl = {
+  facebook: "https://www.facebook.com/profile.php?id=61573047011486",
+};

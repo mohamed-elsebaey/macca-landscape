@@ -21,7 +21,7 @@ const OurProjectsPage = () => {
       <section className="py-16 bg-green-50/80 backdrop-blur-sm">
         <div className="content-width flex flex-col lg:flex-row items-center justify-between gap-8">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-green-400 rounded-xl flex items-center justify-center shadow-sm">
+            <div className="float w-12 h-12 bg-green-400 rounded-xl flex items-center justify-center shadow-sm">
               <Leaf className="w-6 h-6 text-white" />
             </div>
             <h2 className="text-2xl font-semibold text-gradient-2">
@@ -68,7 +68,7 @@ const OurProjectsPage = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-70 group-hover:opacity-80 transition-opacity duration-300"></div>
 
                 <div className="absolute top-4 right-4 flex items-center gap-1">
-                  <Leaf className="w-5 h-5 text-white" />
+                  <Leaf className="float w-5 h-5 text-white" />
                   <span className="bg-green-600 text-white px-3 py-1 rounded-full text-xs font-bold shadow-sm">
                     {project.category}
                   </span>

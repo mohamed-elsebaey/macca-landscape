@@ -38,7 +38,7 @@ export default async function Page({ params }: Props) {
 
   return (
     <main className="min-h-screen content-width py-16">
-      <ImageMasonryGallery images={project.images} batchSize={10} />
+      <ImageMasonryGallery images={project.images} />
     </main>
   );
 }

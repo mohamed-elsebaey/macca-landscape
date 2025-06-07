@@ -18,12 +18,25 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return {
       title: "",
       description: "",
+      keywords: [],
     };
   }
 
   return {
     title: project.title,
-    description: project.description || "اكتشف المزيد عن مشاريع مكة لاندسكيب.",
+    description:
+      project.description ||
+      `تفاصيل مشروع ${project.title} من تنفيذ مكة لاندسكيب، خبرة في تصميم وتنفيذ الحدائق والمساحات الخارجية بمصر.`,
+    keywords: [
+      "مشاريع مكة لاندسكيب",
+      project.title,
+      project.category,
+      "تصميم حدائق",
+      "تنفيذ حدائق",
+      "Landscape Project",
+      "Garden Design",
+      "حدائق مصر",
+    ],
   };
 }
 

@@ -22,7 +22,10 @@ export const metadata: Metadata = {
     default: `${companyName.ar}`,
     template: `${companyName.ar} | %s`,
   },
-  description: "مكة لاندسكيب - تصميم وتنفيذ الحدائق",
+  description: "مكة لاندسكيب هي شركة رائدة في تصميم وتنسيق الحدائق، تقدم خدمات متكاملة لتحويل المساحات الخارجية إلى واحات خضراء جميلة.",
+  keywords: [
+    "مكة لاندسكيب", "تصميم حدائق", "تنسيق حدائق", "تنفيذ حدائق", "مناظر طبيعية", "حدائق", "مشتل", "صيانة حدائق", "خدمات زراعة", "تنسيق حدائق مصر", "شركة حدائق", "Landscape Egypt", "Garden Design", "Landscaping", "Outdoor Spaces", "Green Spaces"
+  ],
 };
 
 export default function RootLayout({

@@ -4,8 +4,11 @@ import type { Metadata } from "next";
 
 
 export const metadata: Metadata = {
-    title: 'عن خدماتنا',
-    description: 'اكتشف كيف يمكننا تحويل مساحتك الخارجية إلى ملاذ طبيعي جميل.',
+    title: 'خدماتنا',
+    description: 'خدمات مكة لاندسكيب تشمل تصميم وتنفيذ وصيانة الحدائق والمساحات الخضراء باستخدام أحدث التقنيات وأفضل النباتات.',
+    keywords: [
+      "خدمات مكة لاندسكيب", "تصميم حدائق", "تنفيذ حدائق", "صيانة حدائق", "مشتل", "زراعة", "Landscape Services", "Garden Maintenance"
+    ],
 };
 
 export default function page() {

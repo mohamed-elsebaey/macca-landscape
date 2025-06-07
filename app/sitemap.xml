@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.macca-landscape.com/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.macca-landscape.com/about</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.macca-landscape.com/our-projects</loc>
+    <priority>0.8</priority>
+  </url>
+  <!-- Dynamic project pages generated from titleEn in _constants.ts -->
+  <url>
+    <loc>https://www.macca-landscape.com/our-projects/Spring%20Flowers%20Exhibition%202025</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.macca-landscape.com/our-projects/Green%20River%2C%20New%20Administrative%20Capital</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.macca-landscape.com/our-projects/Ministers%20District%2C%20New%20Administrative%20Capital</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.macca-landscape.com/our-projects/Sheikh%20Zayed%20City</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.macca-landscape.com/our-projects/6th%20of%20October%20City</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.macca-landscape.com/our-projects/Private%20Villas</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.macca-landscape.com/our-projects/Fifth%20Settlement</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.macca-landscape.com/our-projects/Zaafarana%20City</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.macca-landscape.com/our-projects/New%20Alamein%20City</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.macca-landscape.com/our-services</loc>
+    <priority>0.8</priority>
+  </url>
+  <!-- Add more URLs as needed -->
+</urlset>

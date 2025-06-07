@@ -159,7 +159,7 @@ const FooterSection = () => {
                 className="flex items-center space-x-3"
               >
                 <Mail className="w-5 h-5 text-primary" />
-                <span className="text-green-100">info@maccalandscape.com</span>
+                <span className="text-green-100">info@macca-landscape.com</span>
               </a>
             </div>
           </div>

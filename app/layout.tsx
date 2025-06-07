@@ -5,6 +5,7 @@ import Header from "@/components/sections/header/Header";
 import FooterSection from "@/components/sections/Footer";
 import { companyName } from "@/constants";
 import { CartProvider } from "@/contexts/CartContext";
+import { Analytics } from "@vercel/analytics/next";
 
 
 const cairo = Cairo({
@@ -43,6 +44,7 @@ export default function RootLayout({
           <FooterSection />
           {/* <Toaster /> */}
         </CartProvider>
+        <Analytics />
       </body>
     </html>
   );

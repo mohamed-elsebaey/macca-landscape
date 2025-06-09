@@ -71,7 +71,7 @@ function Header() {
               ))}
               {/* line in small devices */}
               <li className="mt-2 md:mt-0">
-                <Link href="/" className="relative p-3 text-green-50 hover:text-green-200 transition-all duration-300 group">
+                <Link href="/cart" className="relative p-3 text-green-50 hover:text-green-200 transition-all duration-300 group">
                   <ShoppingBag className="w-7 h-7" />
                   <span className="absolute top-3 lg:top-5 lg:right-6  natural-gradient text-white text-xs rounded-full p-1 min-w-6 min-h-6 max-w-10 flex items-center justify-center font-bold shadow-lg animate-pulse">
                     {getCartItemsCount() > 100 ? "100+" : getCartItemsCount()}

@@ -18,7 +18,7 @@ export const navigationLinks = [
   { href: "/about", label: "من نحن" },
   { href: "/our-services", label: "خدماتنا" },
   { href: "/our-projects", label: "أعمالنا" },
-  { href: "/", label: "المتجر" },
+  { href: "/store", label: "المتجر" },
 ];
 
 export const swiperImagesUrl = [

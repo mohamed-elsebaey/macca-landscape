@@ -15,7 +15,6 @@ function Header() {
   const { getCartItemsCount } = useCart();
 
 
-
   const openMenuHandler = () => {
     setIsMenuOpen(() => !isMenuOpen);
   };
@@ -40,17 +39,20 @@ function Header() {
             />
           </Link>
           {/* *************** Menu Icon in small devices ************** */}
-          <button
-            onClick={openMenuHandler}
-            type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 "
-          >
-            {!isMenuOpen ? (
-              <AlignJustify className="text-primary" />
-            ) : (
-              <X className="text-red-600" />
-            )}
-          </button>
+          <div className="flex items-center gap-2 inline-flex md:hidden">
+            <CartIconButton itemsCount={getCartItemsCount()} />
+            <button
+              onClick={openMenuHandler}
+              type="button"
+              className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 "
+            >
+              {!isMenuOpen ? (
+                <AlignJustify className="text-primary" />
+              ) : (
+                <X className="text-red-600" />
+              )}
+            </button>
+          </div>
           {/* ***************************** */}
           <div
             className={`${isMenuOpen ? "flex" : "hidden"
@@ -70,13 +72,8 @@ function Header() {
                 </li>
               ))}
               {/* line in small devices */}
-              <li className="mt-2 md:mt-0">
-                <Link href="/cart" className="relative p-3 text-green-50 hover:text-green-200 transition-all duration-300 group">
-                  <ShoppingBag className="w-7 h-7" />
-                  <span className="absolute top-3 lg:top-5 lg:right-6  natural-gradient text-white text-xs rounded-full p-1 min-w-6 min-h-6 max-w-10 flex items-center justify-center font-bold shadow-lg animate-pulse">
-                    {getCartItemsCount() > 100 ? "100+" : getCartItemsCount()}
-                  </span>
-                </Link>
+              <li className="md:mt-0 hidden md:block">
+                <CartIconButton itemsCount={getCartItemsCount()} />
               </li>
             </ul>
           </div>
@@ -87,3 +84,17 @@ function Header() {
 }
 
 export default Header;
+
+
+const CartIconButton = ({ itemsCount }: { itemsCount: number }) => {
+  return (
+    <Link href="/cart" className="relative p-3 group">
+      <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-tr from-green-600 to-green-400 shadow-lg transition-transform duration-200 group-hover:scale-110">
+        <ShoppingBag className="w-6 h-6 text-white drop-shadow" />
+      </span>
+      <span className="absolute -top-1 -right-1 natural-gradient text-white text-xs rounded-full px-2 py-0.5 min-w-6 min-h-6 flex items-center justify-center font-bold shadow-md border-2 border-white animate-bounce">
+        {itemsCount > 100 ? "100+" : itemsCount}
+      </span>
+    </Link>
+  )
+}

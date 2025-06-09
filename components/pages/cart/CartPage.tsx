@@ -44,7 +44,7 @@ const CartPage = () => {
 
     if (cartItems.length === 0) {
         return (
-            <main className="min-h-screen py-16 px-4 sm:py-24">
+            <main className="min-h-screen px-4 py-24">
                 <div className="content-width text-center">
                     <div className="flex justify-center mb-6 sm:mb-8">
                         <div className="w-20 h-20 sm:w-24 sm:h-24 natural-gradient animate-pulse rounded-full flex items-center justify-center shadow-2xl">
@@ -68,7 +68,7 @@ const CartPage = () => {
     }
 
     return (
-        <main className="min-h-screen py-16 px-2 sm:px-4 sm:py-24">
+        <main className="min-h-screen px-2 sm:px-4 py-24">
             <div className="content-width">
                 <div className="text-center mb-8 sm:mb-12">
                     <div className="flex justify-center mb-4 sm:mb-6">
